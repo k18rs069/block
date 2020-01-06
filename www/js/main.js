@@ -7,8 +7,9 @@ var SETTINGS_GRAVITY = 0.07,
     SETTINGS_BOUND_Y = 1.04,
     SETTINGS_ACCELEROMETER_RELOAD_FREQ = 100,
     SETTINGS_PADDLE_ACCEL = 2.8,
-    SETTINGS_POINT = 1000,
-    SETTINGS_POINT_SILVER = 200,
+    SETTINGS_POINT_SILVER = 100,
+    SETTINGS_POINT_RED = 200,
+    SETTINGS_POINT_BLUE = 1000,
     SETTINGS_POINT_GOLD = 3000000;
     
 var GAMESTATE_STOP = 0,
@@ -71,8 +72,10 @@ var BB = {
     addBlock: function(x, y, color) {
         switch (color) {
             case "red":
+                var point = SETTINGS_POINT_RED;
+                break;
             case "blue":
-                var point = SETTINGS_POINT;
+                var point = SETTINGS_POINT_BLUE;
                 break;
             case "silver":
                 var point = SETTINGS_POINT_SILVER;
